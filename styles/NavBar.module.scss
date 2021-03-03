@@ -1,0 +1,21 @@
+.navbar {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__links {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
