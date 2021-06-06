@@ -1,0 +1,10 @@
+.page {
+  &__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__children {
+    height: 90vh;
+    overflow: auto;
+  }
+}

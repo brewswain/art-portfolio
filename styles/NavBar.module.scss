@@ -3,30 +3,27 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    position: fixed;
     bottom: 0%;
+    z-index: 1;
+    background: white;
+    position: fixed;
   }
   &__links {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-
-    &:first-child {
-      justify-content: flex-start;
-      padding-left: 1rem;
-    }
 
     &:nth-child(2) {
       position: absolute;
       justify-content: flex-end;
-      padding-right: 1rem;
     }
   }
 
   &__logo {
     position: absolute;
+    padding-right: 2rem;
   }
 
   &__modal {
@@ -42,8 +39,12 @@
 
     padding-bottom: 7rem;
 
-    background: hsla(0, 0, 0, 0.4);
+    background: hsla(0, 0, 0, 0.7);
     cursor: pointer;
+
+    .navbar__link {
+      color: white;
+    }
   }
   &__link {
     cursor: pointer;

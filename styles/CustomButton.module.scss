@@ -1,0 +1,36 @@
+.custom {
+  &__button {
+    cursor: pointer;
+    width: 150px;
+    background: #7f818d;
+    color: whitesmoke;
+    border: 2px solid #7f818d;
+    padding: 10px 5px;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+    &__large {
+      width: 250px;
+    }
+
+    &:hover {
+      background: whitesmoke;
+      color: #7f818d;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.button {
+  &--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

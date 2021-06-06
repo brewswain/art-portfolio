@@ -1,9 +1,11 @@
 import { NavBar } from "./";
 
+import styles from "../styles/Layout.module.scss";
+
 const Layout = ({ children }) => (
-  <main className="page__container">
+  <main className={styles.page__container}>
     <NavBar />
-    {children}
+    <div className={styles.page__children}>{children}</div>
   </main>
 );
 

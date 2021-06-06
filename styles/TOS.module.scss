@@ -1,0 +1,36 @@
+.terms {
+  &__page {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 241, 243);
+  }
+
+  &__container {
+    width: 85vw;
+  }
+
+  &__header {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__dialogue {
+    text-align: left;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  &__list {
+    padding-left: 0;
+    &__item {
+      list-style: none;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__button_container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+}

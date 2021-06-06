@@ -1,0 +1,40 @@
+.details {
+   &__container {
+      background: rgba(63, 60, 60, 0.4);
+      // 90vh accounts for navbar
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__image_container {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+   }
+
+   &__image {
+      height: 95%;
+   }
+
+   &__text_container {
+      display: flex;
+      width: 100vw;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 6vw;
+   }
+
+   &__title {
+      margin-top: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+   }
+   &__print {
+      cursor: pointer;
+      color: rgb(236, 209, 209);
+      padding-top: 2px;
+   }
+}

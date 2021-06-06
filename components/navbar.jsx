@@ -13,39 +13,50 @@ const variants = {
     transition: { duration: 0.5 },
   },
   // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
-  stop: { rotate: [180, 0], transition: { duration: 0.5 } },
+  stop: {
+    rotate: [180, 0],
+    transition: { duration: 0.5 },
+  },
 };
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [rotateAngle, setRotateAngle] = useState(0);
 
   return (
     <nav className={styles.navbar__container}>
       <ul className={styles.navbar__links}>
         <Link href="/">
-          <a className={styles.navbar__link}>
-            <li>Blee</li>
+          <a className={styles.navbar__link}>Blee</a>
+        </Link>
+        <Link href="https://twitter.com/wiggIybuff">
+          <a target="_blank" rel="noreferrer">
+            <Image height={30} width={30} src="/twitter.svg" />
           </a>
         </Link>
-      </ul>
-      <ul className={styles.navbar__links}>
+        <Link href="https://twitch.tv/wigglybuff">
+          <a target="_blank" rel="noreferrer">
+            <Image height={30} width={30} src="/twitch.svg" />
+          </a>
+        </Link>
         <AnimatePresence>
-          <motion.div
-            key={styles.navbar__logo}
-            animate={isVisible ? "rotate" : "stop"}
-            variants={variants}
-          >
-            <Image
-              src="/logo.png"
-              width={50}
-              height={50}
-              onClick={() => {
-                setIsVisible(!isVisible);
-              }}
-              className={styles.navbar__logo}
-            />
-          </motion.div>
+          <div style={{ paddingRight: "1rem" }}>
+            <motion.div
+              key={styles.navbar__logo}
+              animate={isVisible ? "rotate" : "stop"}
+              variants={variants}
+            >
+              <Image
+                src="/logo.png"
+                width={50}
+                height={50}
+                onClick={() => {
+                  setIsVisible(!isVisible);
+                }}
+                className={styles.navbar__logo}
+              />
+            </motion.div>
+          </div>
+
           {isVisible && (
             <motion.div
               key={styles.navbar__modal}
@@ -53,7 +64,7 @@ const NavBar = () => {
               onClick={() => setIsVisible(false)}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -600, opacity: 0 }}
+              exit={{ opacity: 0 }}
               transition={{ delay: 0.3 }}
             >
               <Link href="/art">
@@ -64,6 +75,11 @@ const NavBar = () => {
               <Link href="/about">
                 <a className={styles.navbar__link}>
                   <li>About</li>
+                </a>
+              </Link>
+              <Link href="/commissions">
+                <a className={styles.navbar__link}>
+                  <li>Comm.</li>
                 </a>
               </Link>
               <Link href="/contact">
