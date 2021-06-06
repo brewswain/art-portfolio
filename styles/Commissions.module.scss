@@ -1,8 +1,10 @@
 .commissions {
    &__page {
+      height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
    }
 
    &__title {
@@ -11,7 +13,7 @@
    }
 
    &__link {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: red;
    }
@@ -26,9 +28,10 @@
    }
 
    &__form {
-      background: grey;
-      border-radius: 4px;
-      padding: 0.5rem 0.3rem;
+      background: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #664fe9;
       margin-top: 2rem;
    }
 }

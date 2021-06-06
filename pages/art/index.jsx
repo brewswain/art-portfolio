@@ -30,7 +30,7 @@ const Art = () => {
                               />
                               <Link href={`/art/${id}`}>
                                  <div key={url} className={styles.art__title}>
-                                    hello
+                                    {id}
                                  </div>
                               </Link>
                            </div>

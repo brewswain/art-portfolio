@@ -18,17 +18,18 @@ const Commissions = () => (
          </span>
 
          <div className={styles.commissions__form_container}>
-            <p className={styles.commissions__subtitle}>
-               Send a request here!{" "}
+            <div className={styles.commissions__order_container}>
                <a
                   href="#"
                   target="_blank"
                   rel="noreferrer"
                   className={styles.commissions__form}
                >
-                  TypeForm Request
-               </a>{" "}
-            </p>
+                  <p className={styles.commissions__subtitle}>
+                     Send a request here!
+                  </p>
+               </a>
+            </div>
             <p className={styles.commissions__subtitle}>
                Once your request is completed, I'll get in contact within X
                business days, and once we iron out the details, I'll send a
